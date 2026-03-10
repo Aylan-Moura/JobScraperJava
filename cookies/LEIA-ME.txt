@@ -1,0 +1,16 @@
+Como exportar os cookies do LinkedIn
+======================================
+
+1. Instale a extensão "Cookie-Editor" no Chrome:
+   https://chrome.google.com/webstore/detail/cookie-editor/hlkenndednhfkekhgcdicdfddnkalmdm
+
+2. Acesse https://www.linkedin.com e faça login normalmente.
+
+3. Clique no ícone da extensão → "Export" → "Export as JSON"
+
+4. Salve o arquivo nesta pasta com o nome: linkedin.json
+   Caminho final: cookies/linkedin.json
+
+IMPORTANTE:
+- Os cookies expiram em semanas/meses. Quando parar de funcionar, repita o processo.
+- Nunca compartilhe este arquivo — ele dá acesso à sua conta.

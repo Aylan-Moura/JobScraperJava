@@ -1,0 +1,37 @@
+services:
+
+  scraper:
+    build: .
+    container_name: job_scraper
+    volumes:
+      - ./app:/app
+      - ./cookies:/cookies
+    env_file:
+      - .env
+    depends_on:
+      - db
+      - redis
+    shm_size: "256mb"
+    command: python main.py
+
+  db:
+    image: postgres:15
+    container_name: job_scraper_db
+    restart: always
+    environment:
+      POSTGRES_USER: scraper
+      POSTGRES_PASSWORD: scraper
+      POSTGRES_DB: jobs
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:7
+    container_name: job_scraper_redis
+    ports:
+      - "6379:6379"
+
+volumes:
+  postgres_data:
