@@ -62,7 +62,7 @@ job-scraper/
 ### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/job-scraper.git
+git clone https://github.com/Aylan-Moura/JobScraperJava
 cd job-scraper
 ```
 
